@@ -3,125 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>肌育サロン toliko | 鹿屋の隠れ家プライベートサロン</title>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-    
+    <title>Hair Salon Lunor | 鹿屋の隠れ家サロン</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --ivory: #fcfaf8;
-            --greige: #8c7b75;
-            --gold: #c5a059;
-            --bg-overlay: rgba(40, 35, 30, 0.4);
-        }
-
-        body { margin: 0; background-color: var(--ivory); color: #555; font-family: 'Shippori Mincho', serif; line-height: 1.8; }
-
-        .hero {
-            height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center;
-            background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('TOP画.jpg');
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            color: white; 
-            text-align: center;
-        }
-
-        .hero h1 { font-size: 3rem; letter-spacing: 0.2em; margin-bottom: 10px; }
-        .catchphrase { font-size: 1.2rem; }
-        .btn { margin-top: 30px; padding: 15px 40px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 5px; transition: 0.5s; }
-        .btn:hover { background: var(--gold); color: white; }
-
-        section { padding: 80px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
-        h2 { color: var(--greige); font-size: 2rem; margin-bottom: 40px; border-bottom: 1px solid var(--gold); display: inline-block; padding: 0 20px; }
-
-        .menu-list { text-align: left; max-width: 600px; margin: 0 auto; }
-        .menu-category { font-weight: bold; color: var(--greige); margin-top: 30px; border-bottom: 1px solid #e4dcd6; }
-        .menu-item { display: flex; justify-content: space-between; padding: 10px 0; font-size: 0.95rem; }
-        .price { color: var(--greige); font-weight: bold; }
-
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
-        @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
-        .gallery-item { overflow: hidden; border-radius: 8px; height: 250px; background: #e4dcd6; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-        .gallery-item:hover img { transform: scale(1.05); }
-
-        .fade-in { opacity: 0; transform: translateY(30px); transition: 1.2s; }
-        .fade-in.active { opacity: 1; transform: translateY(0); }
-
-        /* 追加：Instagramボタンのデザイン定義 */
-        .insta-fixed-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 120px;
-            height: 120px;
-            background: white;
-            color: var(--greige);
-            border: 1px solid var(--gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            z-index: 9999;
-            transition: transform 0.3s ease;
-        }
-        .insta-fixed-btn:hover { transform: scale(1.1); }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FCFAF9; color: #7D726B; }
+        h1, h2, .font-serif { font-family: 'Shippori Mincho', serif; }
+        .bg-ivory { background-color: #F5F0EC; }
+        .text-beige { color: #A6968B; }
     </style>
 </head>
-
 <body>
-    <header class="hero">
-        <h1>toliko</h1>
-        <p class="catchphrase">日常から少し離れる、<br>私だけの癒やし時間</p>
-        <a href="https://line.me/R/ti/p/..." class="btn">LINEで予約・相談する</a>
+
+    <header class="relative h-screen flex items-center justify-center text-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('top画.jpg'); filter: brightness(0.9);"></div>
+        <div class="relative z-10 p-4">
+            <h1 class="text-3xl md:text-5xl text-white mb-4 tracking-widest">毎日が少し好きになる髪へ。</h1>
+            <p class="text-white text-lg tracking-[0.2em]">Hair Salon Lunor</p>
+        </div>
     </header>
 
-    <main>
-        <section id="about" class="fade-in">
-            <h2>About</h2>
-            <p>完全個室・女性専用のプライベートサロン。<br>木目と間接照明が織りなす空間で、心と身体を整える特別なひとときを。</p>
-        </section>
-        <section id="menu" class="fade-in">
-            <h2>Menu</h2>
-            <div class="menu-list">
-                <div class="menu-category">Facial</div>
-                <div class="menu-item"><span>マーメイドセルトリートメント (60分)</span><span class="price">¥13,000</span></div>
-                <div class="menu-item"><span>ハイドロスプラッシュプレミアム (60分)</span><span class="price">¥8,000</span></div>
-                <div class="menu-category">Body</div>
-                <div class="menu-item"><span>全身オイルマッサージ (90分)</span><span class="price">¥8,000</span></div>
-                <div class="menu-category">Eyelash</div>
-                <div class="menu-item"><span>まつ毛パーマ</span><span class="price">¥4,000</span></div>
-            </div>
-        </section>
-        <section id="gallery" class="fade-in">
-            <h2>Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800" alt="サロン内装"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1570172619644-dfd03d5d812e?q=80&w=800" alt="フェイシャル"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616486701797-0f33f0d1e1ce?q=80&w=800" alt="オイルマッサージ"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1595475207225-42bb4698b031?q=80&w=800" alt="アイラッシュ"></div>
-            </div>
-        </section>
-    </main>
+    <section class="py-20 px-6 max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl mb-8">Concept</h2>
+        <p class="leading-relaxed">鹿屋市西大手町に佇む、小さな隠れ家サロン。<br>
+        透明感と柔らかさを大切にした、あなただけのヘアスタイルを。<br>
+        韓国インテリアと心地よい自然光に包まれて、上質なひとときをお過ごしください。</p>
+    </section>
 
-    <a href="https://www.instagram.com/hadaiku_toliko"class="insta-fixed-btn"target="_blank"rel="noopener noreferrer">Instagram</a>
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-xl mx-auto border-t border-b border-ivory py-10 text-center">
+            <div class="text-yellow-400 mb-4">★★★★★</div>
+            <p class="text-lg mb-4 font-serif italic">"髪の毛をほんとに大切にしてくれる。お客様目線で考えてくれる。毎回行くのが楽しみになる最高のお店です。"</p>
+            <p class="text-sm text-beige">- お客様からの声</p>
+        </div>
+    </section>
 
-    <script>
-        window.addEventListener("scroll", () => {
-            document.querySelectorAll('.fade-in').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
-                    el.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <section class="bg-ivory py-20 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            
+            <div class="space-y-6">
+                <h2 class="text-2xl mb-4">Access</h2>
+                <p>〒893-0008<br>鹿児島県鹿屋市西大手町10-1</p>
+                <p>TEL: 0994-37-0099</p>
+                <div class="space-y-1 text-sm">
+                    <p>営業時間：9:00〜19:00</p>
+                    <p>定休日：月曜日</p>
+                </div>
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="https://www.instagram.com/hairsalon_lunor/" target="_blank" class="block w-full py-3 border border-[#A6968B] text-center hover:bg-[#A6968B] hover:text-white transition">Instagramを見る</a>
+                    <a href="#" class="block w-full py-3 bg-[#A6968B] text-white text-center transition">LINEで予約する</a>
+                </div>
+            </div>
+
+            <div class="w-full overflow-hidden rounded-lg shadow-sm">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.853819142796!2d130.85026299999998!3d31.390594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e91cb73848d03%3A0x5e7cd339e6665df5!2shair%20salon%20Lunor!5e0!3m2!1sja!2sjp!4v1779362065169!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-sm text-beige">
+        © Hair Salon Lunor. All Rights Reserved.
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="#" class="bg-white px-8 py-4 rounded-full shadow-lg border border-ivory text-sm hover:bg-[#F5F0EC] transition">RESERVATION</a>
+    </div>
+
 </body>
 </html>
