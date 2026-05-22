@@ -16,13 +16,15 @@
 
         body { margin: 0; background-color: var(--ivory); color: #555; font-family: 'Shippori Mincho', serif; line-height: 1.8; }
 
+        /* TOP画を画像に戻したヒーローセクション */
         .hero {
             height: 100vh; 
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
             align-items: center;
-            background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('TOP画.jpg');
+            /* 背景画像の設定 */
+            background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('top-image.jpg');
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat;
@@ -52,7 +54,6 @@
         .fade-in { opacity: 0; transform: translateY(30px); transition: 1.2s; }
         .fade-in.active { opacity: 1; transform: translateY(0); }
 
-        /* 追加：Instagramボタンのデザイン定義 */
         .insta-fixed-btn {
             position: fixed;
             bottom: 30px;
@@ -89,6 +90,7 @@
             <h2>About</h2>
             <p>完全個室・女性専用のプライベートサロン。<br>木目と間接照明が織りなす空間で、心と身体を整える特別なひとときを。</p>
         </section>
+        
         <section id="menu" class="fade-in">
             <h2>Menu</h2>
             <div class="menu-list">
@@ -101,18 +103,19 @@
                 <div class="menu-item"><span>まつ毛パーマ</span><span class="price">¥4,000</span></div>
             </div>
         </section>
+
         <section id="gallery" class="fade-in">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800" alt="サロン内装"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1570172619644-dfd03d5d812e?q=80&w=800" alt="フェイシャル"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616486701797-0f33f0d1e1ce?q=80&w=800" alt="オイルマッサージ"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1595475207225-42bb4698b031?q=80&w=800" alt="アイラッシュ"></div>
+                <div class="gallery-item"><img src="pic1.jpg" alt="Gallery 1"></div>
+                <div class="gallery-item"><img src="pic2.jpg" alt="Gallery 2"></div>
+                <div class="gallery-item"><img src="pic3.jpg" alt="Gallery 3"></div>
+                <div class="gallery-item"><img src="pic4.jpg" alt="Gallery 4"></div>
             </div>
         </section>
     </main>
 
-    <a href="https://www.instagram.com/hadaiku_toliko"class="insta-fixed-btn"target="_blank"rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.instagram.com/hadaiku_toliko" class="insta-fixed-btn" target="_blank" rel="noopener noreferrer">Instagram</a>
 
     <script>
         window.addEventListener("scroll", () => {
