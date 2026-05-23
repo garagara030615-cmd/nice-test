@@ -3,87 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>肌育サロン toliko | 鹿屋の隠れ家プライベートサロン</title>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --ivory: #fcfaf8;
-            --greige: #8c7b75;
-            --gold: #c5a059;
-            --bg-overlay: rgba(40, 35, 30, 0.4);
+    <title>Venus | 鹿屋のプライベートサロン</title>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #eaf0e6 !important; 
         }
-        body { margin: 0; background-color: var(--ivory); color: #555; font-family: 'Shippori Mincho', serif; line-height: 1.8; }
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; color: white; text-align: center; }
-        .hero video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); object-fit: cover; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-overlay); z-index: 0; }
-        .hero-content { z-index: 1; }
-        .hero h1 { font-size: 3rem; letter-spacing: 0.2em; margin-bottom: 10px; }
-        .catchphrase { font-size: 1.2rem; }
-        .btn { margin-top: 30px; padding: 15px 40px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 5px; transition: 0.5s; }
-        .btn:hover { background: var(--gold); color: white; }
-        section { padding: 80px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
-        h2 { color: var(--greige); font-size: 2rem; margin-bottom: 40px; border-bottom: 1px solid var(--gold); display: inline-block; padding: 0 20px; }
-        .menu-list { text-align: left; max-width: 600px; margin: 0 auto; }
-        .menu-category { font-weight: bold; color: var(--greige); margin-top: 30px; border-bottom: 1px solid #e4dcd6; }
-        .menu-item { display: flex; justify-content: space-between; padding: 10px 0; font-size: 0.95rem; }
-        .price { color: var(--greige); font-weight: bold; }
-        .gallery-container { text-align: center; margin-top: 20px; }
-        .gallery-container img { width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: 1.2s; }
-        .fade-in.active { opacity: 1; transform: translateY(0); }
-        .insta-fixed-btn { position: fixed; bottom: 30px; right: 30px; width: 120px; height: 120px; background: white; color: var(--greige); border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.75rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 9999; transition: transform 0.3s ease; }
-        .insta-fixed-btn:hover { transform: scale(1.1); }
+        body { 
+            font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            line-height: 2.0; 
+            color: #7a726e; 
+        }
+        
+        .wrapper { max-width: 650px; margin: 0 auto; padding: 60px 20px; }
+
+        .top-image-container { width: 100%; margin-bottom: 50px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .top-image-container img { width: 100%; display: block; }
+        
+        /* 追加画像のスタイル */
+        .content-image-container { width: 100%; margin-bottom: 50px; border-radius: 10px; overflow: hidden; }
+        .content-image-container img { width: 100%; display: block; }
+
+        h1 { font-size: 1.4rem; color: #6e6561; text-align: center; margin-bottom: 40px; font-weight: 300; letter-spacing: 0.05em; }
+        h2 { font-size: 1.1rem; color: #8c817d; text-align: center; margin-bottom: 40px; font-weight: 400; }
+
+        .section { margin-bottom: 80px; }
+        .card { background: #fff; padding: 50px 40px; border-radius: 10px; }
+
+        li { margin-bottom: 15px; list-style: none; border-bottom: 1px solid #f7f3f1; padding-bottom: 10px; }
+        
+        .cta-btn { 
+            display: block; 
+            background: #e6e0dd; 
+            color: #7a726e; 
+            text-align: center; 
+            padding: 18px; 
+            text-decoration: none; 
+            font-weight: 400; 
+            border-radius: 4px; 
+            transition: 0.4s;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+        }
+        .cta-btn:hover { background: #dcd6d3; }
+
+        /* インスタ用ボタン */
+        .insta-btn {
+            background: #fff;
+            border: 1px solid #e6e0dd;
+            color: #8c817d;
+        }
+
+        iframe { border-radius: 4px; display: block; }
+        .voice { font-style: italic; color: #8e8784; margin-bottom: 25px; }
+        .owner-message { font-size: 0.95rem; text-align: center; margin-bottom: 40px; line-height: 1.8; color: #7a726e; font-style: italic; }
     </style>
 </head>
 <body>
-    <header class="hero">
-        <video autoplay muted loop playsinline>
-            <source src="toliko2.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>toliko</h1>
-            <p class="catchphrase">日常から少し離れる、<br>私だけの癒やし時間</p>
-            <a href="https://lin.ee/W2u6ntw" class="btn">LINEで予約・相談する</a>
+
+<div class="wrapper">
+    <div class="top-image-container">
+        <img src="venus.png" alt="Venus Kagoshima">
+    </div>
+
+    <h1>今日の私を、少しだけ好きになる。<br>Venusで始める、丁寧なメンテナンス。</h1>
+
+    <div class="section card">
+        <h2>About</h2>
+        <p style="text-align: center;">誰にも邪魔されない、私だけの特別な時間。<br>お肌の悩みや日々積み重なった心の重荷を、<br>そっと下ろしていけるような場所でありたい。<br>Venusは、あなたらしさに寄り添う<br>プライベートサロンです。</p>
+        
+        <div class="owner-message">
+            「私が施術した後に、お客様が元気になり笑顔で帰っていかれるのをみて…<br>
+            お客様と、もっとゆっくり関わりたい。<br>
+            一人ひとりのお客様と、お付き合いしていきたい！<br>
+            そう思い、サロンを開く事にしました。」
         </div>
-    </header>
 
-    <main>
-        <section id="about" class="fade-in">
-            <h2>About</h2>
-            <p>完全個室・女性専用のプライベートサロン。<br>木目と間接照明が織りなす空間で、心と身体を整える特別なひとときを。</p>
-        </section>
-        <section id="menu" class="fade-in">
-            <h2>Menu</h2>
-            <div class="menu-list">
-                <div class="menu-category">Facial</div>
-                <div class="menu-item"><span>マーメイドセルトリートメント (60分)</span><span class="price">¥13,000</span></div>
-                <div class="menu-item"><span>ハイドロスプラッシュプレミアム (60分)</span><span class="price">¥8,000</span></div>
-                <div class="menu-category">Body</div>
-                <div class="menu-item"><span>全身オイルマッサージ (90分)</span><span class="price">¥8,000</span></div>
-                <div class="menu-category">Eyelash</div>
-                <div class="menu-item"><span>まつ毛パーマ</span><span class="price">¥4,000</span></div>
-            </div>
-        </section>
-        <section id="gallery" class="fade-in">
-            <h2>Gallery</h2>
-            <div class="gallery-container">
-                <img src="salon-bed.jpg" alt="サロン内装・ベッド">
-            </div>
-        </section>
-    </main>
+        <!-- ここにvenus2.pngを配置 -->
+        <div class="content-image-container">
+            <img src="venus2.png" alt="Venus Salon Image">
+        </div>
+    </div>
 
-    <a href="https://www.instagram.com/hadaiku_toliko" class="insta-fixed-btn" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <div class="section card">
+        <h2>Menu & Policy</h2>
+        <ul>
+            <li><strong>ジェル不要の最新脱毛：</strong>肌への優しさとスピードを大切に。</li>
+            <li><strong>オーダーメイドケア：</strong>その日の心と身体の状態を読み解きます。</li>
+            <li><strong>都度払い制：</strong>あなたのペースで、必要な時に必要なだけ。</li>
+            <li><strong>勧誘なし：</strong>安心してお過ごしいただける空間をお約束します。</li>
+        </ul>
+    </div>
 
-    <script>
-        window.addEventListener("scroll", () => {
-            document.querySelectorAll('.fade-in').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
-                    el.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <div class="section">
+        <h2 style="margin-bottom: 20px;">Voice</h2>
+        <div class="voice">「痛みもほとんどなく、驚くほど楽になりました。もっと早く来ればよかった。」</div>
+        <div class="voice">「不調箇所を丁寧にケアしてくださるので、終わった後の軽さが違います。」</div>
+    </div>
+
+    <div class="section">
+        <h2 style="margin-bottom: 20px;">Access</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1409.556820418455!2d130.86144651757772!3d31.366283662031886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e91a05a2c688d%3A0x7b5e0f520cca5ef7!2z44Ko44K544OG44K144Ot44OzdmVudXM!5e0!3m2!1sja!2sjp!4v1779504060464!5m2!1sja!2sjp" width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <a href="https://line.me/R/ti/p/@414kwsrg" class="cta-btn">ご予約・ご相談はこちら</a>
+    <a href="https://www.instagram.com/ve.nus7245/" target="_blank" class="cta-btn insta-btn">instagram</a>
+</div>
+
 </body>
 </html>
